@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reissue Passport Application Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PassportApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="userhome.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="applynewpassport.html">Apply New Passport</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reissuepassport.html">Reissue Passport</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="payment.html">Payment</a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <h2>Government of India, Ministry of External Affairs</h2>
+        <h3>Reissue Passport Application Form</h3>
+        <form>
+            <!-- Service Required -->
+            <fieldset>
+                <legend>Service Required</legend>
+                <label>
+                    Applying for:
+                    <input type="radio" name="service_required" value="reissue_passport" checked> Reissue Passport
+                </label>
+            </fieldset>
+
+            <!-- Applicant Details -->
+            <fieldset>
+                <legend>Applicant Details</legend>
+                <label>Applicant's Given Name:</label>
+                <input type="text" name="given_name" class="form-control">
+                <br>
+                <label>Surname:</label>
+                <input type="text" name="surname" class="form-control">
+                <br>
+                <label>Are you known by any other names (aliases)?</label>
+                <label>
+                    <input type="radio" name="aliases" value="yes"> Yes
+                    <input type="radio" name="aliases" value="no" checked> No
+                </label>
+                <br>
+                <label>Have you ever changed your name?</label>
+                <label>
+                    <input type="radio" name="name_change" value="yes"> Yes
+                    <input type="radio" name="name_change" value="no" checked> No
+                </label>
+                <br>
+                <label>Date of Birth (DD-MM-YYYY):</label>
+                <input type="text" name="dob" placeholder="DD-MM-YYYY" class="form-control">
+                <br>
+                <label>Place of Birth:</label>
+                <input type="text" name="birth_place" class="form-control">
+                <br>
+                <label>District (If born in India):</label>
+                <input type="text" name="birth_district" class="form-control">
+                <br>
+                <label>State/UT (If born in India):</label>
+                <input type="text" name="birth_state" class="form-control">
+                <br>
+                <label>Region/Country (If born abroad):</label>
+                <input type="text" name="birth_country" class="form-control">
+                <br>
+                <label>Gender:</label>
+                <label>
+                    <input type="radio" name="gender" value="male" checked> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="transgender"> Transgender
+                </label>
+                <br>
+                <label>Marital Status:</label>
+                <label>
+                    <input type="radio" name="marital_status" value="single" checked> Single
+                    <input type="radio" name="marital_status" value="married"> Married
+                    <input type="radio" name="marital_status" value="divorced"> Divorced
+                    <input type="radio" name="marital_status" value="widow_widower"> Widow/Widower
+                    <input type="radio" name="marital_status" value="separated"> Separated
+                </label>
+                <br>
+                <label>Citizenship of India by:</label>
+                <label>
+                    <input type="radio" name="citizenship" value="birth" checked> Birth
+                    <input type="radio" name="citizenship" value="descent"> Descent
+                    <input type="radio" name="citizenship" value="registration_naturalization"> Registration/Naturalization
+                </label>
+                <br>
+                <label>PAN (If available):</label>
+                <input type="text" name="pan" class="form-control">
+                <br>
+                <label>Voter ID (If available):</label>
+                <input type="text" name="voter_id" class="form-control">
+                <br>
+                <label>Employment Type:</label>
+                <select name="employment_type" class="form-control">
+                    <option value="psu">PSU</option>
+                    <option value="government">Government</option>
+                    <option value="statutory_body">Statutory Body</option>
+                    <option value="retired_government_servant">Retired Government Servant</option>
+                    <option value="self_employed">Self Employed</option>
+                    <option value="private">Private</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="not_employed">Not Employed</option>
+                    <option value="retired_private_service">Retired-Private Service</option>
+                    <option value="student">Student</option>
+                    <option value="others">Others</option>
+                    <option value="owners_partners_directors">Owners, Partners & Directors of companies which are members of CII, FICCI & ASSOCHAM</option>
+                </select>
+                <br>
+                <label>If employed in Government/Statutory Body/PSU, specify organization name:</label>
+                <input type="text" name="organization_name" class="form-control">
+                <br>
+                <label>Is either of your parent (in case of minor)/spouse, a government servant?</label>
+                <label>
+                    <input type="radio" name="govt_servant" value="yes"> Yes
+                    <input type="radio" name="govt_servant" value="no" checked> No
+                </label>
+                <br>
+                <label>Educational Qualification:</label>
+                <label>
+                    <input type="radio" name="education" value="7th_pass_or_less"> 7th pass or less
+                    <input type="radio" name="education" value="between_8th_and_9th_standard"> Between 8th and 9th Standard
+                    <input type="radio" name="education" value="10th_pass_and_above" checked> 10th pass and above
+                    <input type="radio" name="education" value="graduate_and_above"> Graduate and above
+                </label>
+                <br>
+                <label>Are you eligible for Non-ECR category?</label>
+                <label>
+                    <input type="radio" name="non_ecr" value="yes"> Yes
+                    <input type="radio" name="non_ecr" value="no" checked> No
+                </label>
+                <br>
+                <label>Visible Distinguishing Mark:</label>
+                <input type="text" name="distinguishing_mark" class="form-control">
+                <br>
+                <label>Aadhaar Number:</label>
+                <input type="text" name="aadhaar_number" class="form-control">
+            </fieldset>
+
+            <!-- Family Details -->
+            <fieldset>
+                <legend>Family Details</legend>
+                <label>Father's Given Name:</label>
+                <input type="text" name="father_name" class="form-control">
+                <br>
+                <label>Mother's Given Name:</label>
+                <input type="text" name="mother_name" class="form-control">
+                <br>
+                <label>Legal Guardian's Given Name (If applicable):</label>
+                <input type="text" name="guardian_name" class="form-control">
+                <br>
+                <label>Spouse's Given Name (If married):</label>
+                <input type="text" name="spouse_name" class="form-control">
+                <br>
+                <label>Parent's Passport Details (If applicable):</label>
+                <label>Father's Passport No:</label>
+                <input type="text" name="father_passport_no" class="form-control">
+                <br>
+                <label>Mother's Passport No:</label>
+                <input type="text" name="mother_passport_no" class="form-control">
+                <br>
+                <label>Legal Guardian's Passport No (If applicable):</label>
+                <input type="text" name="guardian_passport_no" class="form-control">
+                <br>
+                <label>Spouse's Passport No (If applicable):</label>
+                <input type="text" name="spouse_passport_no" class="form-control">
+            </fieldset>
+
+            <!-- Present Residential Address -->
+            <fieldset>
+                <legend>Present Residential Address</legend>
+                <label>House No. and Street Name:</label>
+                <input type="text" name="house_street" class="form-control">
+                <br>
+                <label>Village/Town/City:</label>
+                <input type="text" name="village_city" class="form-control">
+                <br>
+                <label>District:</label>
+                <input type="text" name="district" class="form-control">
+                <br>
+                <label>State/UT:</label>
+                <input type="text" name="state" class="form-control">
+                <br>
+                <label>PIN:</label>
+                <input type="text" name="pin" class="form-control">
+                <br>
+                <label>Mobile Number:</label>
+                <input type="text" name="mobile" class="form-control">
+                <br>
+                <label>Telephone Number:</label>
+                <input type="text" name="telephone" class="form-control">
+                <br>
+                <label>Email ID:</label>
+                <input type="email" name="email" class="form-control">
+            </fieldset>
+
+            <!-- Emergency Contact Details -->
+            <fieldset>
+                <legend>Emergency Contact Details</legend>
+                <label>Emergency Contact Person Name:</label>
+                <input type="text" name="emergency_contact_name" class="form-control">
+                <br>
+                <label>Emergency Contact Person Address:</label>
+                <input type="text" name="emergency_contact_address" class="form-control">
+                <br>
+                <label>Emergency Contact Person Mobile/Telephone Number:</label>
+                <input type="text" name="emergency_contact_phone" class="form-control">
+                <br>
+                <label>Emergency Contact Person Email ID:</label>
+                <input type="email" name="emergency_contact_email" class="form-control">
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
