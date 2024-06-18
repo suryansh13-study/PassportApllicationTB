@@ -41,15 +41,28 @@
 
     <div class="container">
         <h2>Government of India, Ministry of External Affairs</h2>
-        <h3>Reissue Passport Application Form</h3>
+        <h3>New Passport Application Form</h3>
         <form>
             <!-- Service Required -->
             <fieldset>
                 <legend>Service Required</legend>
                 <label>
                     Applying for:
-                    <input type="radio" name="service_required" value="reissue_passport" checked> Reissue Passport
+                    <input type="radio" name="service_required" value="reissue_passport"> Reissue Passport
                 </label>
+                <br>
+                <label>If reissue, specify reason:</label>
+                <select name="reissue_reason" class="form-control">
+                    <option value="validity_expired_within_3_years">Validity Expired within 3 years</option>
+                    <option value="validity_expired_more_than_3_years">Validity Expired more than 3 years ago</option>
+                    <option value="exhaustion_of_pages">Exhaustion of Pages</option>
+                    <option value="lost_passport">Lost Passport</option>
+                    <option value="change_in_existing_particulars">Change in Existing Particulars</option>
+                    <option value="damaged_passport">Damaged Passport</option>
+                </select>
+                <br>
+                <label>If change in existing particulars, specify reason:</label>
+                <input type="text" name="change_reason" class="form-control">
             </fieldset>
 
             <!-- Applicant Details -->
@@ -157,7 +170,9 @@
                 </label>
                 <br>
                 <label>Visible Distinguishing Mark:</label>
-                <input type="text" name="distinguishing_mark" class="form-control">
+                <input type="text
+
+" name="distinguishing_mark" class="form-control">
                 <br>
                 <label>Aadhaar Number:</label>
                 <input type="text" name="aadhaar_number" class="form-control">
@@ -169,14 +184,26 @@
                 <label>Father's Given Name:</label>
                 <input type="text" name="father_name" class="form-control">
                 <br>
+                <label>Father's Surname:</label>
+                <input type="text" name="father_surname" class="form-control">
+                <br>
                 <label>Mother's Given Name:</label>
                 <input type="text" name="mother_name" class="form-control">
+                <br>
+                <label>Mother's Surname:</label>
+                <input type="text" name="mother_surname" class="form-control">
                 <br>
                 <label>Legal Guardian's Given Name (If applicable):</label>
                 <input type="text" name="guardian_name" class="form-control">
                 <br>
+                <label>Legal Guardian's Surname (If applicable):</label>
+                <input type="text" name="guardian_surname" class="form-control">
+                <br>
                 <label>Spouse's Given Name (If married):</label>
                 <input type="text" name="spouse_name" class="form-control">
+                <br>
+                <label>Spouse's Surname (If married):</label>
+                <input type="text" name="spouse_surname" class="form-control">
                 <br>
                 <label>Parent's Passport Details (If applicable):</label>
                 <label>Father's Passport No:</label>
@@ -204,6 +231,9 @@
                 <label>District:</label>
                 <input type="text" name="district" class="form-control">
                 <br>
+                <label>Police Station:</label>
+                <input type="text" name="police_station" class="form-control">
+                <br>
                 <label>State/UT:</label>
                 <input type="text" name="state" class="form-control">
                 <br>
@@ -220,6 +250,28 @@
                 <input type="email" name="email" class="form-control">
             </fieldset>
 
+            <!-- Previous Passport Details -->
+            <fieldset>
+                <legend>Previous Passport Details</legend>
+                <label>Passport Number:</label>
+                <input type="text" name="previous_passport_no" class="form-control">
+                <br>
+                <label>Date of Issue (DD-MM-YYYY):</label>
+                <input type="text" name="previous_issue_date" placeholder="DD-MM-YYYY" class="form-control">
+                <br>
+                <label>Place of Issue:</label>
+                <input type="text" name="previous_issue_place" class="form-control">
+                <br>
+                <label>File Number:</label>
+                <input type="text" name="previous_file_no" class="form-control">
+                <br>
+                <label>Are there any criminal proceedings pending against you before a court in India?</label>
+                <label>
+                    <input type="radio" name="criminal_proceedings" value="yes"> Yes
+                    <input type="radio" name="criminal_proceedings" value="no" checked> No
+                </label>
+            </fieldset>
+
             <!-- Emergency Contact Details -->
             <fieldset>
                 <legend>Emergency Contact Details</legend>
@@ -234,6 +286,52 @@
                 <br>
                 <label>Emergency Contact Person Email ID:</label>
                 <input type="email" name="emergency_contact_email" class="form-control">
+            </fieldset>
+
+            <!-- Additional Information -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label>Have you ever been convicted by a court of law?</label>
+                <label>
+                    <input type="radio" name="court_conviction" value="yes"> Yes
+                    <input type="radio" name="court_conviction" value="no" checked> No
+                </label>
+                <br>
+                <label>Are any criminal proceedings pending against you before a court in India?</label>
+                <label>
+                    <input type="radio" name="criminal_proceedings" value="yes"> Yes
+                    <input type="radio" name="criminal_proceedings" value="no" checked> No
+                </label>
+                <br>
+                <label>Have you ever been refused or denied passport?</label>
+                <label>
+                    <input type="radio" name="passport_refusal" value="yes"> Yes
+                    <input type="radio" name="passport_refusal" value="no" checked> No
+                </label>
+                <br>
+                <label>Has your passport ever been impounded or revoked?</label>
+                <label>
+                    <input type="radio" name="passport_impound" value="yes"> Yes
+                    <input type="radio" name="passport_impound" value="no" checked> No
+                </label>
+                <br>
+                <label>Have you ever applied for or been granted political asylum by any country?</label>
+                <label>
+                    <input type="radio" name="political_asylum" value="yes"> Yes
+                    <input type="radio" name="political_asylum" value="no" checked> No
+                </label>
+                <br>
+                <label>Have you ever returned to India on Emergency Certificate (EC) or were ever deported or repatriated?</label>
+                <label>
+                    <input type="radio" name="emergency_certificate" value="yes"> Yes
+                    <input type="radio" name="emergency_certificate" value="no" checked> No
+                </label>
+                <br>
+                <label>Is applicant a government servant?</label>
+                <label>
+                    <input type="radio" name="government_servant" value="yes"> Yes
+                    <input type="radio" name="government_servant" value="no" checked> No
+                </label>
             </fieldset>
 
             <button type="submit" class="btn btn-primary">Submit</button>
